@@ -11,13 +11,13 @@ interface FetchSomethingInput {
 }
 
 export function Example() {
-  const [methodnameResponse, setResponse] = useState<MethodExampleResponse>();
+  const [dataState, setDataState] = useState<MethodExampleResponse>();
 
-  useNuiEvent<MethodExampleResponse>("appname", "methodname", setResponse);
+  useNuiEvent<MethodExampleResponse>("appname", "methodname", setDataState);
 
   const [
     fetchSomething,
-    { loading, error, response: fetchSomethingResponse },
+    { loading, error, response },
   ] = useNuiEventCallback<FetchSomethingInput, MethodExampleResponse>(
     "appname",
     "fetchSomething"
@@ -29,12 +29,12 @@ export function Example() {
 
   return (
     <div className={styles.ExampleClass}>
-      <pre>{JSON.stringify(methodnameResponse)}</pre>
+      <pre>{JSON.stringify(dataState)}</pre>
       <pre>
         {loading ? (
           <span>Loading...</span>
         ) : (
-          JSON.stringify(fetchSomethingResponse) || <span />
+          JSON.stringify(response) || <span />
         )}
       </pre>
       {error && <pre>Unexpected Error!</pre>}
