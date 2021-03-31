@@ -31,7 +31,11 @@ export function Example() {
     <div className={styles.ExampleClass}>
       <pre>{JSON.stringify(methodnameResponse)}</pre>
       <pre>
-        {loading ? "Loading..." : JSON.stringify(fetchSomethingResponse)}
+        {loading ? (
+          <span>Loading...</span>
+        ) : (
+          JSON.stringify(fetchSomethingResponse) || <span />
+        )}
       </pre>
       {error && <pre>Unexpected Error!</pre>}
     </div>
