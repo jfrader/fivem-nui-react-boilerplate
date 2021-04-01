@@ -4,7 +4,7 @@ A boilerplate for creating a UI on FiveM NUI
 
 # license
 
-fivem-nui-react-boilerplate - A boilerplate for creating a NUI interface for FiveM 
+fivem-nui-react-boilerplate - A boilerplate for creating a UI on FiveM NUI
 
 Copyright (C) 2021  J Francisco Rader <franciscorader@gmail.com> (kidz)
 
