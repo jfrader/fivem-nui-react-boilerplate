@@ -1,6 +1,6 @@
 # fivem-nui-react-boilerplate
 
-A boilerplate for creating a NUI interface for FiveM 
+A boilerplate for creating a UI on FiveM NUI
 
 # license
 
