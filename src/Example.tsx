@@ -1,6 +1,10 @@
 import styles from "./Example.module.css";
 import { useEffect, useState } from "react";
-import { useNuiEvent, useNuiEventCallback } from "fivem-nui-react-lib";
+import {
+  useNuiEvent,
+  useNuiEventCallback,
+  useNuiRequest,
+} from "fivem-nui-react-lib";
 
 interface MethodExampleResponse {
   dummy: unknown;
@@ -13,19 +17,23 @@ interface FetchSomethingInput {
 export function Example() {
   const [dataState, setDataState] = useState<MethodExampleResponse>();
 
+  const { send } = useNuiRequest();
+
   useNuiEvent<MethodExampleResponse>("appname", "methodname", setDataState);
 
-  const [
-    fetchSomething,
-    { loading, error, response },
-  ] = useNuiEventCallback<FetchSomethingInput, MethodExampleResponse>(
-    "appname",
-    "fetchSomething"
-  );
+  const [fetchSomething, { loading, error, response }] = useNuiEventCallback<
+    FetchSomethingInput,
+    MethodExampleResponse
+  >("appname", "fetchSomething");
 
   useEffect(() => {
     fetchSomething({ dummy: 1 });
   }, [fetchSomething]);
+
+  useEffect(() => {
+    // Just a request sent to client, no loading, no response.
+    send("my-request", { dummy: "Im sending request" });
+  }, [send]);
 
   return (
     <div className={styles.ExampleClass}>

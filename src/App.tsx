@@ -1,17 +1,16 @@
-import React from 'react';
-import './App.css';
-import { useNuiService } from 'fivem-nui-react-lib';
-import { Example } from './Example';
+import "./App.css";
+import { NuiServiceProvider } from "fivem-nui-react-lib";
+import { Example } from "./Example";
 
 function App() {
-  useNuiService();
-
   return (
-    <div className="App">
-      <header className="App-header">
-        <Example />
-      </header>
-    </div>
+    <NuiServiceProvider resource="my-resource-name">
+      <div className="App">
+        <header className="App-header">
+          <Example />
+        </header>
+      </div>
+    </NuiServiceProvider>
   );
 }
 
