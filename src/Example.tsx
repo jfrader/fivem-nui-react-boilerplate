@@ -19,7 +19,7 @@ export function Example() {
 
   const { send } = useNuiRequest();
 
-  useNuiEvent<MethodExampleResponse>("appname", "methodname", setDataState);
+  useNuiEvent("appname", "methodname", setDataState);
 
   const [fetchSomething, { loading, error, response }] = useNuiEventCallback<
     FetchSomethingInput,
