@@ -2,7 +2,7 @@ import styles from "./Example.module.css";
 import { useEffect, useState } from "react";
 import {
   useNuiEvent,
-  useNuiEventCallback,
+  useNuiCallback,
   useNuiRequest,
 } from "fivem-nui-react-lib";
 
@@ -21,7 +21,7 @@ export function Example() {
 
   useNuiEvent("appname", "methodname", setDataState);
 
-  const [fetchSomething, { loading, error, response }] = useNuiEventCallback<
+  const [fetchSomething, { loading, error, response }] = useNuiCallback<
     FetchSomethingInput,
     MethodExampleResponse
   >("appname", "fetchSomething");
