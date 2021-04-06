@@ -7,11 +7,11 @@ import {
 } from "fivem-nui-react-lib";
 
 interface MethodExampleResponse {
-  dummy: unknown;
+  dummy: string;
 }
 
 interface FetchSomethingInput {
-  dummy: unknown;
+  dummy: number;
 }
 
 export function Example() {
