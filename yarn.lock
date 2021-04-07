@@ -5425,10 +5425,10 @@ find-up@^3.0.0:
   dependencies:
     locate-path "^3.0.0"
 
-fivem-nui-react-lib@2.2.0:
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/fivem-nui-react-lib/-/fivem-nui-react-lib-2.2.0.tgz#9a7be6132fb817181191acee70f3cd24b3b69152"
-  integrity sha512-oTPNYjy/UemX/u1oinRGILmmh32XZ1YLfPD7Jsb8x8wAjFK2htyuglgkDzmi7ZwG9s+5Qj8mjnGVBk/v7Vk3Kw==
+fivem-nui-react-lib@2.2.2:
+  version "2.2.2"
+  resolved "https://registry.yarnpkg.com/fivem-nui-react-lib/-/fivem-nui-react-lib-2.2.2.tgz#ccacefaf377dd2d9fcdf10b685c4aed31dea0d5c"
+  integrity sha512-OBD/6MNrvZySKH/28iI9tvu4Y0zD/5rmerm+IoNdnrDsMjN8C4XEGW01Rv1WO6u8CBOYhv9sKbuc6ptS6lKyuQ==
   dependencies:
     typescript "^4.1.2"
 
