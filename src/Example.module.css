@@ -1,3 +1,11 @@
 .ExampleClass {
-  color: '#030303'
+  color: "#030303";
+}
+
+.ExampleClass button {
+  color: "#030303";
+  font-size: 1em;
+  padding: 16px;
+  background-color: "#ffffff";
+  border: none;
 }

@@ -35,17 +35,17 @@ export function Example() {
     send("my-request", { dummy: "Im sending request" });
   }, [send]);
 
+  const stringResponse = JSON.stringify(response);
+
   return (
     <div className={styles.ExampleClass}>
       <pre>{JSON.stringify(dataState)}</pre>
+      <pre>{loading && <span>Loading...</span>}</pre>
+      <pre>Response: {stringResponse || ''}</pre>
+      {error && <pre>{(error as any).message}</pre>}
       <pre>
-        {loading ? (
-          <span>Loading...</span>
-        ) : (
-          JSON.stringify(response) || <span />
-        )}
+        <button onClick={() => fetchSomething({ dummy: 2 })}>fetch something again</button>
       </pre>
-      {error && <pre>Unexpected Error!</pre>}
     </div>
   );
 }
