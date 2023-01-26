@@ -5425,10 +5425,10 @@ find-up@^3.0.0:
   dependencies:
     locate-path "^3.0.0"
 
-fivem-nui-react-lib@^2.2.8:
-  version "2.2.8"
-  resolved "https://registry.yarnpkg.com/fivem-nui-react-lib/-/fivem-nui-react-lib-2.2.8.tgz#41df54b37cbb61806f44a5d426e4c5ec6387fde9"
-  integrity sha512-8eeCp3J1yS4ymFpRwig72dcIJviF+63ug1j4GBZXBzo1QmKyDjRCR36HwBhl2YKYgYyC4sJbTSeT+k6T61F3Fg==
+fivem-nui-react-lib@2.3.8:
+  version "2.3.8"
+  resolved "https://registry.yarnpkg.com/fivem-nui-react-lib/-/fivem-nui-react-lib-2.3.8.tgz#2b87a88f85dc5ba7f3ccb8ba9b1795a36d0ab7f9"
+  integrity sha512-RcvNjx7oBVaup1W8Wtrxh2AdW1300vOZiFHo16xy/R+31VmmWXcZr7O+UHtnTn0G1M2a9Sy+fnBxf+542oaJkQ==
 
 flat-cache@^3.0.4:
   version "3.0.4"
@@ -8074,7 +8074,7 @@ oauth-sign@~0.9.0:
 object-assign@^4.0.1, object-assign@^4.1.0, object-assign@^4.1.1:
   version "4.1.1"
   resolved "https://registry.yarnpkg.com/object-assign/-/object-assign-4.1.1.tgz#2109adc7965887cfc05cbbd442cac8bfbb360863"
-  integrity sha1-IQmtx5ZYh8/AXLvUQsrIv7s2CGM=
+  integrity sha512-rJgTQnkUnH1sFw8yT6VSU3zD3sWmu6sZhIseY8VX+GRu3P6F7Fu+JNDoXfklElbLJSnc3FUQHVe4cU5hj+BcUg==
 
 object-copy@^0.1.0:
   version "0.1.0"

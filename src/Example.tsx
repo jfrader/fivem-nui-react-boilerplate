@@ -18,6 +18,9 @@ export function Example() {
   const [dataState, setDataState] = useState<MethodExampleResponse>();
 
   const { send } = useNuiRequest();
+  const { send: sendToResource } = useNuiRequest({
+    resource: "another-resource",
+  });
 
   useNuiEvent("appname", "methodname", setDataState);
 
@@ -27,13 +30,18 @@ export function Example() {
   >("appname", "fetchSomething");
 
   useEffect(() => {
-    fetchSomething({ dummy: 1 }, { timeout: 2000 });
+    fetchSomething({ dummy: 1 }, { timeout: 5000 });
   }, [fetchSomething]);
 
   useEffect(() => {
     // Just a request sent to client, no loading, no response.
-    send("my-request", { dummy: "Im sending request" });
-  }, [send]);
+    send("my-request", { dummy: "Im sending request" })
+      // always handle the error in case it couldn't be sent
+      .catch(console.error);
+
+    // Send a request to a different resource than the provider
+    sendToResource("another-request", { dummy: true }).catch(console.error);
+  }, [send, sendToResource]);
 
   const stringResponse = JSON.stringify(response);
 
@@ -41,10 +49,12 @@ export function Example() {
     <div className={styles.ExampleClass}>
       <pre>{JSON.stringify(dataState)}</pre>
       <pre>{loading && <span>Loading...</span>}</pre>
-      <pre>Response: {stringResponse || ''}</pre>
+      <pre>Response: {stringResponse || ""}</pre>
       {error && <pre>{(error as any).message}</pre>}
       <pre>
-        <button onClick={() => fetchSomething({ dummy: 2 })}>fetch something again</button>
+        <button onClick={() => fetchSomething({ dummy: 2 })}>
+          fetch something again
+        </button>
       </pre>
     </div>
   );
