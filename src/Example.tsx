@@ -30,7 +30,7 @@ export function Example() {
   >("appname", "fetchSomething");
 
   useEffect(() => {
-    fetchSomething({ dummy: 1 }, { timeout: 5000 });
+    fetchSomething({ dummy: 1 }, { timeout: 2000 });
   }, [fetchSomething]);
 
   useEffect(() => {

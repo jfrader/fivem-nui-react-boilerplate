@@ -4,7 +4,7 @@ import { Example } from "./Example";
 
 function App() {
   return (
-    <NuiProvider resource="my-resource-name" timeout={5000}>
+    <NuiProvider resource="my-resource-name" timeout={2500}>
       <div className="App">
         <header className="App-header">
           <Example />
