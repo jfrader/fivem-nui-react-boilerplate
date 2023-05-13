@@ -553,7 +553,7 @@ and each file should have at least the “copyright” line and a pointer to
 where the full notice is found.
 
     fivem-nui-react-boilerplate - A boilerplate for creating a UI on FiveM NUI
-    Copyright (C) 2021  J Francisco Rader <franciscorader@gmail.com> (kidz)
+    Copyright (C) 2021 fran
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -574,7 +574,7 @@ If the program does terminal interaction, make it output a short notice like thi
 when it starts in an interactive mode:
 
     fivem-nui-react-boilerplate - A boilerplate for creating a UI on FiveM NUI
-    Copyright (C) 2021  J Francisco Rader <franciscorader@gmail.com> (kidz)
+    Copyright (C) 2021 fran
     This program comes with ABSOLUTELY NO WARRANTY; for details type 'show w'.
     This is free software, and you are welcome to redistribute it
     under certain conditions; type 'show c' for details.
